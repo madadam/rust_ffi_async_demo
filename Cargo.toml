@@ -1,0 +1,11 @@
+[package]
+name = "ffi_async_demo"
+version = "0.1.0"
+authors = ["Adam Cigánek <adam.ciganek@gmail.com>"]
+
+[dependencies]
+thread-id = "2.0.0"
+
+[lib]
+crate_type = ["dylib"]
+
