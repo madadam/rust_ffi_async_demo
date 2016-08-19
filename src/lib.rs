@@ -15,12 +15,8 @@ pub extern fn run_delayed(callback: extern fn()) {
     thread::spawn(move || {
         println!("second thread started (id: {})", thread_id::get());
         thread::sleep(Duration::from_secs(1));
+        println!("second thread done sleeping");
         callback();
-        println!("second thread ended");
+        println!("second thread finished");
     });
-}
-
-#[cfg(test)]
-mod test {
-    use super::*;
 }

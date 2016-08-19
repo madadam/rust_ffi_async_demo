@@ -1,6 +1,7 @@
 target
 Cargo.lock
 
+*.log
 node_modules
 
 *.sublime-workspace

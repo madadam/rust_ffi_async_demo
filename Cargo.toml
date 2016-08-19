@@ -7,5 +7,5 @@ authors = ["Adam Cigánek <adam.ciganek@gmail.com>"]
 thread-id = "2.0.0"
 
 [lib]
-crate_type = ["dylib"]
+crate_type = ["cdylib"]
 
