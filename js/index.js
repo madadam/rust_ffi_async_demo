@@ -1,6 +1,5 @@
 var ffi = require('ffi'),
-    ref = require('ref'),
-    sleep = require('sleep')
+    ref = require('ref')
 
 var lib = ffi.Library('./libffi_async_demo', {
   'print_thread_id': [ 'void', [] ],
@@ -15,6 +14,6 @@ var callback = ffi.Callback('void', [], function() {
 
 lib.run_delayed(callback)
 
-sleep.sleep(2);
-
-console.log("js main finished");
+setTimeout(function() {
+  console.log("js main finished")
+}, 2000)
