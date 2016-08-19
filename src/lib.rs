@@ -10,7 +10,7 @@ pub extern fn print_thread_id() {
 
 #[no_mangle]
 pub extern fn run_delayed(callback: extern fn()) {
-    println!("main thread id: {}", thread_id::get());
+    println!("run_delayed started (id: {})", thread_id::get());
 
     thread::spawn(move || {
         println!("second thread started (id: {})", thread_id::get());
@@ -19,4 +19,6 @@ pub extern fn run_delayed(callback: extern fn()) {
         callback();
         println!("second thread finished");
     });
+
+    println!("run_delayed finished");
 }
